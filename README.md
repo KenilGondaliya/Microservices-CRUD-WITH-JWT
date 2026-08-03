@@ -24,7 +24,7 @@ Before starting, make sure you have the following installed:
 Create the following two projects:
 
 ```
-MSAResource
+MSAApp
 MSAClient
 ```
 
@@ -44,7 +44,7 @@ Create a new **Java Maven Project**.
 
 Create the following projects:
 
-- `MSAResource`
+- `MSAApp`
 - `MSAClient`
 
 ---
@@ -103,7 +103,7 @@ jakarta
 
 # Step 5: Configure Database
 
-Inside the **MSAResource** project:
+Inside the **MSAApp** project:
 
 - Create `persistence.xml`
 - Configure the database connection
@@ -245,7 +245,7 @@ Configure it as follows:
 
 ```java
 @RegisterRestClient(
-    baseUri = "http://localhost:8085/MSAResource/rest/user"
+    baseUri = "http://localhost:8085/MSAApp/rest/user"
 )
 ```
 
@@ -321,11 +321,11 @@ Inside the servlet:
 
 # Step 20: Deploy the Projects
 
-## Deploy MSAResource
+## Deploy MSAApp
 
 ```bash
 java -jar payara.jar \
---deploy MSAResource/artifact/MSAResource.war \
+--deploy MSAApp/artifact/MSAApp.war \
 --port 8085 \
 --addlibs mysql-connector-java-8.0.20.jar \
 --domainconfig domain.xml
@@ -346,7 +346,7 @@ java -jar payara.jar \
 # Deployment Order
 
 1. Start MySQL
-2. Deploy **MSAResource**
+2. Deploy **MSAApp**
 3. Deploy **MSAClient**
 4. Open the application in your browser or Postman.
 5. Test CRUD APIs using JWT authentication.
@@ -379,7 +379,7 @@ MSAClient
    │
    │ REST Client + JWT Token
    ▼
-MSAResource
+MSAApp
    │
    │ CRUD Operations
    ▼
@@ -396,4 +396,4 @@ MySQL Database
 
 # Author
 
-**Muhammad Shakil Patel**
+**kenil Gondaliya**
