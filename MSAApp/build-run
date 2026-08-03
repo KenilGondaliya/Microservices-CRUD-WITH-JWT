@@ -1,0 +1,5 @@
+#!/bin/sh
+mvn clean package
+docker build -t kenilgondaliya/MSAApp .
+docker rm -f MSAApp 2>/dev/null || true
+docker run -it --name MSAApp -p 8080:8080 --name MSAApp kenilgondaliya/MSAApp
