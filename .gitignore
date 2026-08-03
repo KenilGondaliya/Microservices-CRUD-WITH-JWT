@@ -17,3 +17,25 @@ Thumbs.db
 
 # Java
 *.class
+
+target/
+artifact/
+
+*.war
+
+
+logs/
+
+build
+build-run
+buildx-bootstrap
+buildx-deploy
+buildx-stop
+
+payara/
+payara-*.jar
+
+
+jwt/*.jar
+jwt/*.jwt
+jwt/*.json
