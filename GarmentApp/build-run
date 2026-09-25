@@ -1,0 +1,5 @@
+#!/bin/sh
+mvn clean package
+docker build -t kenilgondaliya/GarmentApp .
+docker rm -f GarmentApp 2>/dev/null || true
+docker run -it --name GarmentApp -p 8080:8080 --name GarmentApp kenilgondaliya/GarmentApp
